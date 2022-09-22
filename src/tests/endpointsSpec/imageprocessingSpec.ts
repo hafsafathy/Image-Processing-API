@@ -9,11 +9,11 @@ describe('Testing the imageprocessimg endpoint', () => {
       await request.get('/imageprocessimg').expect(400);
     });
   
-    it('Using the endpoint with a non-existent lead returns 404', async () => {
-      await request.get('/imageprocessimg?image_name=fjord78.jpg').expect(404);
+    it('Using the endpoint with a non-existent image returns 404', async () => {
+      await request.get('/imageprocessimg?image_name=dfg.jpg').expect(404);
     });
   
-    it('Using the endpoint with a valid lead returns 200', async () => {
+    it('Using the endpoint with a valid image returns 200', async () => {
       await request.get('/imageprocessimg?image_name=palmtunnel.jpg').expect(200);
     });
   });
