@@ -26,7 +26,7 @@ imageprocessing_routes.get('/', (req: Request, res: Response) => {
       .send('Resource not found, this picture does not exist!');
   }
 
-  // Otherwise return the lead's avatar
+  // Otherwise return the imageprocessing's avatar
   res.sendFile(imgLocation);
 })});
 
